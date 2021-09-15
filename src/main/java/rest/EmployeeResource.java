@@ -65,11 +65,11 @@ public class EmployeeResource {
         return new Gson().toJson(employeesDTO);
     }
     
-    @Path("create")
-    @GET
-    @Produces({MediaType.APPLICATION_JSON})
-    public String createEmp(){
-        return null;
-    } 
+//    @Path("create")
+//    @GET
+//    @Produces({MediaType.APPLICATION_JSON})
+//    public String createEmp(){
+//        return null;
+//    } 
     
 }
