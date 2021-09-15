@@ -6,13 +6,9 @@ package rest;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import dtos.EmployeeDTO;
-import entities.Employee;
 import facades.EmployeeFacade;
 import facades.FacadeExample;
 import java.util.List;
-import javax.jws.WebService;
-import javax.jws.WebMethod;
-import javax.jws.WebParam;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.ws.rs.GET;
@@ -30,7 +26,7 @@ public class EmployeeResource {
 
     private final FacadeExample FACADE = FacadeExample.getFacadeExample(EMF);
     private final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
-    EmployeeFacade ef = EmployeeFacade.getEmployeeFacade(Persistence.createEntityManagerFactory("pu"));
+    EmployeeFacade ef = EmployeeFacade.getEmployeeFacade(EMF_Creator.createEntityManagerFactory());
 
     @Path("byid/{id}")
     @GET
