@@ -78,7 +78,7 @@ public class EmployeeFacade {
         }
     }
 
-    public void createEmployee(String name, String address, BigDecimal salary) {
+    public void createEmployee(String name, String address, Long salary) {
         EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();

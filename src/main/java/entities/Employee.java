@@ -23,9 +23,9 @@ public class Employee implements Serializable {
     private Long id;
     private String name;
     private String address;
-    private BigDecimal salary;
+    private Long salary;
 
-    public Employee(String name, String address, BigDecimal salary) {
+    public Employee(String name, String address, Long salary) {
         this.name = name;
         this.address = address;
         this.salary = salary;
@@ -50,11 +50,11 @@ public class Employee implements Serializable {
         this.address = address;
     }
 
-    public BigDecimal getSalary() {
+    public Long getSalary() {
         return salary;
     }
 
-    public void setSalary(BigDecimal salary) {
+    public void setSalary(Long salary) {
         this.salary = salary;
     }
 
